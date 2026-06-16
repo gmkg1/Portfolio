@@ -152,8 +152,9 @@ app.controller('AppController', ['$scope', '$location', function ($scope, $locat
                 $location.path('/projects');
                 break;
             case 'achieve':
-                $scope.terminalHistory.push('Redirecting to SYSTEM_ACHIEVEMENTS...');
-                $location.path('/achievements');
+    $scope.terminalHistory.push('Redirecting to EXPERIENCE...');
+    $location.path('/experience');
+    break;
                 break;
             case 'contact':
                 $scope.terminalHistory.push('Redirecting to COMM_PORTAL...');
