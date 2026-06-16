@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulam Maheen Khader - Portfolio</title>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#5d5f5f",
+                        "on-primary": "#2f3131",
+                        "inverse-on-surface": "#303031",
+                        "surface-container": "#1f2020",
+                        "outline": "#8e9192",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-surface": "#e3e2e2",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "primary-container": "#e2e2e2",
+                        "on-tertiary": "#5e1700",
+                        "tertiary-fixed-dim": "#ffb59e",
+                        "surface-container-high": "#292a2a",
+                        "surface-tint": "#c6c6c7",
+                        "on-error": "#690005",
+                        "tertiary-container": "#ffdbd0",
+                        "on-primary-fixed-variant": "#454747",
+                        "tertiary-fixed": "#ffdbd0",
+                        "primary": "#ffffff",
+                        "surface-variant": "#343535",
+                        "on-primary-container": "#636565",
+                        "on-tertiary-container": "#b83500",
+                        "on-surface-variant": "#c4c7c8",
+                        "surface-container-lowest": "#0d0e0f",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-secondary": "#313030",
+                        "secondary-container": "#474746",
+                        "on-background": "#e3e2e2",
+                        "surface-container-low": "#1b1c1c",
+                        "primary-fixed": "#e2e2e2",
+                        "surface-dim": "#121414",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#444748",
+                        "surface-container-highest": "#343535",
+                        "surface-bright": "#383939",
+                        "background": "#121414",
+                        "surface": "#121414",
+                        "on-primary-fixed": "#1a1c1c",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#3a0b00",
+                        "secondary": "#c8c6c5",
+                        "on-tertiary-fixed-variant": "#852400",
+                        "inverse-surface": "#e3e2e2",
+                        "on-secondary-fixed-variant": "#474746",
+                        "tertiary": "#ffffff",
+                        "signal-orange": "#FF4D00"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "48px",
+                        "unit": "4px",
+                        "stack-md": "16px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "data-mono": ["JetBrains Mono"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "body-md": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "body-lg": ["JetBrains Mono"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "fontWeight": "600"}],
+                        "data-mono": ["13px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .brutalist-shadow { box-shadow: 4px 4px 0px 0px #FF4D00; }
+        .brutalist-shadow-white { box-shadow: 4px 4px 0px 0px #ffffff; }
+        .grid-lines { background-image: radial-gradient(#343535 1px, transparent 1px); background-size: 24px 24px; }
+        .dither-texture { opacity: 0.05; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+        .clip-slant { clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
+    </style>
+
+    <!-- Custom Brutalist Styles -->
+    <style type="text/css">
+        body {
+            background-color: #0D0D0D;
+            color: #FFFFFF;
+        }
+        
+        .brutalist-border {
+            border: 3px solid #FFFFFF;
+        }
+        
+        .brutalist-shadow {
+            box-shadow: 6px 6px 0px 0px #FFFFFF;
+        }
+        
+        .brutalist-shadow-orange {
+            box-shadow: 6px 6px 0px 0px #B83500;
+        }
+        
+        .active-press:active {
+            transform: translate(3px, 3px);
+            box-shadow: none;
+        }
+
+        .technical-card {
+            position: relative;
+        }
+
+        .technical-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(184, 53, 0, 0.15), transparent 80%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .technical-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Webkit Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D0D0D;
+            border-left: 1px solid #262626;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B83500;
+            border: 2px solid #0D0D0D;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF8C00;
+        }
+    </style>
+
+    <!-- AngularJS & Route -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+</head>
+<body ng-app="portfolioApp" ng-controller="AppController" class="bg-background text-primary font-body-md flex flex-col min-h-screen selection:bg-signal-orange selection:text-white">
+
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden opacity-20 grayscale mix-blend-screen">
+        <img alt="" class="w-full h-full object-cover object-center scale-110"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvk-giHGQgFGhSmJRecwnXrJRv4XN20VazO3inKK2LtV0N-XRx54kPul4z1q9wRNny1IsBQs3g3bb1sr36Mwd2sqPwWn-fnAO4TPpESGifybWPmLoeTvn3N2P_iFPgwAijM2TMl5B1POzyvQKvz65HzkDgd0O9P4HFIPdQrSInQ5LwVFTRXocgzxTKghvZtiz7ezZEyzfpNcbGmEjWKdWHd9UeOPEEcuiUDisGClNrhDxhvnwgwRdOmCsgGtpyVGafY5AV2LWyDBXC"/>
+    </div>
+
+    <!-- Top Navigation Header -->
+    <header class="border-b-4 border-white sticky top-0 bg-background/95 backdrop-blur z-40">
+        <div class="px-margin-desktop py-4 flex justify-between items-center max-w-[1400px] mx-auto">
+            <!-- Branding Logo -->
+            <a href="#!/" class="font-display-lg text-xl md:text-2xl font-extrabold uppercase tracking-tighter text-white hover:text-signal-orange transition-colors" header-branding>
+                GULAM_MAHEEN_KHADER
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-gutter font-data-mono text-sm">
+                <a href="#!/" ng-class="{'text-signal-orange font-bold': isActive('/')}" class="hover:text-signal-orange transition-colors">HOME</a>
+                <a href="#!/projects" ng-class="{'text-signal-orange font-bold': isActive('/projects')}" class="hover:text-signal-orange transition-colors">PROJECTS</a>
+                <a href="#!/experience" ng-class="{'text-signal-orange font-bold': isActive('/experience')}" class="hover:text-signal-orange transition-colors">EXPERIENCE</a>
+                <a href="#!/contact" ng-class="{'text-signal-orange font-bold': isActive('/contact')}" class="hover:text-signal-orange transition-colors">CONTACT</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-4">
+                <!-- Terminal Toggle Button -->
+                <button ng-click="toggleTerminal()" class="brutalist-border bg-signal-orange text-background px-3 py-1.5 flex items-center justify-center font-data-mono text-xs font-bold hover:bg-transparent hover:text-white transition-all active-press" title="Open Console">
+                    <span class="material-symbols-outlined mr-1 text-base">terminal</span>
+                    SHELL
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button ng-click="toggleMobileMenu()" class="md:hidden text-white flex items-center justify-center p-1 focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <span class="material-symbols-outlined text-3xl">{{mobileMenuOpen ? 'close' : 'menu'}}</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div ng-show="mobileMenuOpen" class="md:hidden border-t-2 border-white bg-background flex flex-col font-data-mono text-base divide-y divide-outline-variant">
+            <a href="#!/" ng-click="mobileMenuOpen = false" class="px-margin-desktop py-4 hover:bg-surface-container transition-colors" ng-class="{'text-signal-orange bg-surface-container-low font-bold': isActive('/')}">[01] HOME</a>
+            <a href="#!/projects" ng-click="mobileMenuOpen = false" class="px-margin-desktop py-4 hover:bg-surface-container transition-colors" ng-class="{'text-signal-orange bg-surface-container-low font-bold': isActive('/projects')}">[02] PROJECTS</a>
+            <a href="#!/achievements" ng-click="mobileMenuOpen = false" class="px-margin-desktop py-4 hover:bg-surface-container transition-colors" ng-class="{'text-signal-orange bg-surface-container-low font-bold': isActive('/achievements')}">[03] ACHIEVEMENTS</a>
+            <a href="#!/contact" ng-click="mobileMenuOpen = false" class="px-margin-desktop py-4 hover:bg-surface-container transition-colors" ng-class="{'text-signal-orange bg-surface-container-low font-bold': isActive('/contact')}">[04] CONTACT</a>
+        </div>
+    </header>
+
+    <!-- Main View Container -->
+    <main class="flex-grow max-w-[1400px] w-full mx-auto py-12 px-6 md:px-margin-desktop relative z-10" ng-view>
+        <div class="fixed inset-0 dither-texture z-[100]"></div>
+        <!-- AngularJS routes will mount templates here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t-4 border-white bg-surface-container-lowest mt-auto">
+        <div class="px-margin-desktop py-8 max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter font-data-mono text-xs text-outline">
+            <div>
+                &copy; 2026 GULAM MAHEEN KHADER. All rights reserved. <span class="hidden md:inline">|</span> <a href="#!/privacy" class="hover:text-signal-orange transition-colors">Privacy Policy</a>
+            </div>
+            <div class="flex gap-4">
+                <span>SYSTEM_V: 8.2.1</span>
+                <span>//</span>
+                <span>INTEGRITY: SECURED</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Retro Terminal Console Overlay -->
+    <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" ng-show="terminalOpen" aria-modal="true" role="dialog">
+        <div class="w-full max-w-2xl bg-black border-4 border-signal-orange brutalist-shadow-orange flex flex-col h-[450px]">
+            <!-- Terminal Header -->
+            <div class="bg-signal-orange text-background px-4 py-2.5 flex justify-between items-center font-data-mono text-xs font-bold select-none">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-background animate-pulse"></span>
+                    <span>MAHEEN_ENGINEER CORE_SHELL v8.2.1</span>
+                </div>
+                <button class="hover:text-white font-black px-1.5 active:scale-95 transition-transform" ng-click="toggleTerminal()" title="Close Shell">[X]</button>
+            </div>
+            
+            <!-- Terminal Console History -->
+            <div id="terminal-console" class="flex-grow p-4 overflow-y-auto font-data-mono text-xs text-signal-orange space-y-1 bg-black">
+                <div ng-repeat="line in terminalHistory track by $index" class="whitespace-pre-wrap leading-relaxed">{{line}}</div>
+            </div>
+            
+            <!-- Terminal Input Form -->
+            <form ng-submit="processCommand(terminalInput)" class="border-t-2 border-signal-orange p-3 flex bg-black items-center">
+                <span class="text-signal-orange font-data-mono text-sm mr-2 select-none">&gt;</span>
+                <input id="terminal-input-field" 
+                       type="text" 
+                       ng-model="terminalInput" 
+                       class="flex-grow bg-transparent text-signal-orange font-data-mono text-xs focus:outline-none border-none p-0 caret-signal-orange" 
+                       placeholder="type 'help' for authorized commands..."
+                       autocomplete="off" />
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Micro-interaction for technical cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Simple typing effect for branding
+        const branding = document.querySelector('header h1');
+        if(branding) {
+            branding.addEventListener('mouseenter', () => {
+                branding.style.letterSpacing = '0.1em';
+                branding.style.transition = 'letter-spacing 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+            branding.addEventListener('mouseleave', () => {
+                branding.style.letterSpacing = '-0.05em';
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- Hero Section / Header -->
+<section class="mb-stack-lg border-l-4 border-on-tertiary-container pl-stack-md">
+    <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg uppercase text-primary leading-none mb-2">
+        PROJECT_ARCHIVE</h1>
+    <p class="font-data-mono text-data-mono text-on-tertiary-container uppercase tracking-widest">
+        SYSTEMS_INTEGRATION // STRUCTURAL_LOGIC // V.2024</p>
+</section>
+
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+    <article ng-repeat="project in projects" class="bg-surface-container border-2 border-primary flex flex-col brutalist-shadow transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,1)]">
+        <div class="aspect-video overflow-hidden border-b-2 border-primary relative">
+            <img ng-src="{{project.image}}" alt="{{project.title}} technical dithered illustration"
+                class="w-full h-full object-contain bg-surface-container grayscale brightness-90 hover:grayscale-0 transition-all duration-500" />
+            <div class="absolute top-2 right-2 bg-on-tertiary-container text-surface px-2 py-1 font-data-mono text-[10px] border border-primary">
+                STATUS: {{project.status}}</div>
+        </div>
+        <div class="p-stack-md flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-stack-sm">
+                <h3 class="font-headline-md text-headline-md text-primary leading-tight">{{project.title}}</h3>
+                <span class="font-data-mono text-data-mono text-outline">{{project.id}}</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mb-stack-md">
+                <span ng-repeat="tag in project.tags" class="border border-outline-variant px-2 py-0.5 font-data-mono text-[11px] text-on-surface-variant uppercase">{{tag}}</span>
+            </div>
+            <p class="font-body-md text-body-md text-secondary mb-stack-lg line-clamp-3">
+                {{project.description}}
+            </p>
+            <button class="mt-auto bg-tertiary-fixed-dim text-on-tertiary-fixed px-stack-md py-stack-sm font-label-caps text-label-caps border-2 border-on-tertiary-fixed-variant brutalist-shadow-orange active-press flex items-center justify-center gap-2">
+                {{project.actionText}}
+                <span class="material-symbols-outlined text-[18px]">{{project.actionIcon}}</span>
+            </button>
+        </div>
+    </article>
+</div>
