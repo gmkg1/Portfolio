@@ -191,78 +191,137 @@ app.controller('HomeController', ['$scope', function ($scope) {
 }]);
 
 app.controller('ProjectsController', ['$scope', function ($scope) {
-    $scope.projects = [
-        {
-            id: '#001',
-            title: 'SAFESURF',
-            status: 'DEPLOYED',
-            tags: ['PYTHON', 'AI', 'CYBERSECURITY'],
-            description: 'AI-powered browser safety platform that combines content filtering, parental controls, and real-time monitoring to create a safer online experience for children.',
-            image: 'images/safesurf.png',
-            actionText: 'VIEW_PROJECT',
-            actionIcon: 'open_in_new'
-        },
-        {
-            id: '#002',
-            title: 'ASSET_MANAGEMENT_ERP',
-            status: 'ACTIVE',
-            tags: ['ANGULAR', 'JAVA', 'MONGODB', 'VERTX'],
-            description: 'Enterprise Asset Management system developed at Kristu Jayanti Software Development Centre featuring asset tracking, issuance workflows, inventory monitoring, and reporting.',
-            image: 'images/asset.png',
-            actionText: 'VIEW_PROJECT',
-            actionIcon: 'open_in_new'
-        },
-        {
-            id: '#003',
-            title: 'RESUME_ANALYZER',
-            status: 'OPERATIONAL',
-            tags: ['PYTHON', 'FLASK', 'NLP', 'GEMINI'],
-            description: 'AI-powered resume analysis platform that extracts PDF content, performs NLP processing, and generates actionable feedback for job seekers.',
-            image: 'images/ra.png',
-            actionText: 'VIEW_PROJECT',
-            actionIcon: 'open_in_new'
-        },
-        {
-            id: '#004',
-            title: 'RESUME_BUILDER_AI',
-            status: 'OPERATIONAL',
-            tags: ['PYTHON', 'FLASK', 'GROQ_API'],
-            description: 'Interactive AI resume builder that dynamically interviews users and generates professional resumes based on their experience and skills.',
-            image: 'images/rb.png',
-            actionText: 'VIEW_PROJECT',
-            actionIcon: 'open_in_new'
-        },
-        {
-            id: '#005',
-            title: 'FRAUD_DETECTION_SYSTEM',
-            status: 'PRODUCTION_READY',
-            tags: ['MACHINE_LEARNING', 'SCIKIT_LEARN'],
-            description: 'Fraud detection model utilizing Random Forest and SMOTE to handle class imbalance while maximizing fraud detection recall.',
-            image: 'images/fraud.png',
-            actionText: 'VIEW_PROJECT',
-            actionIcon: 'open_in_new'
-        },
-        {
-            id: '#006',
-            title: 'HEART_DISEASE_PREDICTOR',
-            status: 'STABLE',
-            tags: ['ML', 'FLASK', 'HEALTHCARE_AI'],
-            description: 'Machine learning application predicting heart disease risk using Random Forest models trained on the UCI Heart Disease dataset.',
-            image: 'images/heart.png',
-            actionText: 'VIEW_PROJECT',
-            actionIcon: 'open_in_new'
-        },
-        {
-            id: '#007',
-            title: 'NEURAL_NEXUS',
-            status: 'RESEARCH',
-            tags: ['AI', 'PYTHON'],
-            description: 'Experimental AI research project focused on intelligent systems and machine learning applications.',
-            image: 'images/nn.png',
-            actionText: 'VIEW_PROJECT',
-            actionIcon: 'open_in_new'
-        }
-    ];
+
+$scope.projects = [
+    {
+        id: '#001',
+        title: 'ASSET_MANAGEMENT_ERP',
+        status: 'ACTIVE',
+        tags: ['ANGULAR', 'JAVA', 'MONGODB', 'VERTX'],
+        description: 'Enterprise Asset Management platform developed at Kristu Jayanti Software Development Centre featuring asset lifecycle management, issuance workflows, inventory tracking, role-based access control, and reporting dashboards.',
+        image: 'images/asset.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#002',
+        title: 'SAFESURF',
+        status: 'DEPLOYED',
+        tags: ['PYTHON', 'AI', 'CYBERSECURITY'],
+        description: 'AI-powered browser safety platform that combines intelligent content filtering, parental controls, and real-time monitoring to create a safer online experience for children.',
+        image: 'images/safesurf.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#003',
+        title: 'HUMAN_EMOTION_DETECTOR',
+        status: 'DEPLOYED',
+        tags: ['PYTHON', 'NLP', 'SCIKIT_LEARN', 'LOGISTIC_REGRESSION'],
+        description: 'Text emotion classification system trained on thousands of labeled samples to identify Joy, Sadness, Anger, Fear, Love, and Disgust using Natural Language Processing and Logistic Regression.',
+        image: 'images/nn.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#004',
+        title: 'FRAUD_DETECTION_SYSTEM',
+        status: 'PRODUCTION_READY',
+        tags: ['PYTHON', 'MACHINE_LEARNING', 'RANDOM_FOREST', 'SMOTE'],
+        description: 'Fraud detection system built using Random Forest and SMOTE to address severe class imbalance, achieving high recall for identifying fraudulent transactions.',
+        image: 'images/fraud.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#005',
+        title: 'FOREST_COVER_PREDICTOR',
+        status: 'DEPLOYED',
+        tags: ['PYTHON', 'XGBOOST', 'STACKING_CLASSIFIER'],
+        description: 'Ensemble machine learning model combining Random Forest and XGBoost to classify forest cover types from geographical and environmental attributes.',
+        image: 'images/forestcover.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#006',
+        title: 'MOBILE_PRICE_PREDICTOR',
+        status: 'DEPLOYED',
+        tags: ['PYTHON', 'MACHINE_LEARNING', 'RANDOM_FOREST'],
+        description: 'Machine learning application that predicts mobile phone price ranges using device specifications and a complete preprocessing and prediction pipeline.',
+        image: 'images/mobileprice.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#007',
+        title: 'HEART_DISEASE_PREDICTOR',
+        status: 'STABLE',
+        tags: ['PYTHON', 'FLASK', 'HEALTHCARE_AI'],
+        description: 'Healthcare machine learning application that predicts heart disease risk using Random Forest models trained on the UCI Heart Disease dataset with a Flask-based web interface.',
+        image: 'images/heart.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#008',
+        title: 'RESUME_ANALYZER',
+        status: 'OPERATIONAL',
+        tags: ['PYTHON', 'FLASK', 'NLP', 'GEMINI'],
+        description: 'AI-powered resume analysis platform leveraging NLP and Gemini AI to extract resume insights, identify skill gaps, and provide personalized career recommendations.',
+        image: 'images/ra.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#009',
+        title: 'RESUME_BUILDER_AI',
+        status: 'OPERATIONAL',
+        tags: ['PYTHON', 'FLASK', 'GROQ_API'],
+        description: 'Interactive AI resume builder that dynamically interviews users and generates professional resumes tailored to their experience, skills, and career goals.',
+        image: 'images/rb.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    },
+    {
+        id: '#010',
+        title: 'CYBER_WAR_ROOM',
+        status: 'DEPLOYED',
+        tags: ['HTML', 'JAVASCRIPT', 'CYBERSECURITY'],
+        description: 'Interactive cybersecurity simulation platform where users participate in attack-and-defense scenarios against automated opponents while learning security concepts through gameplay.',
+        image: 'images/cyberwarroom.png',
+        actionText: 'VIEW_PROJECT',
+        actionIcon: 'open_in_new'
+    }
+];
+app.controller('ExperienceController', ['$scope', function ($scope) {
+$scope.timeline2022 = [
+    { period: '2026', title: 'BACKEND_DEVELOPER' },
+    { period: '2025', title: 'ML_INTERN' },
+    { period: '2025', title: 'WEB_DEVELOPER' },
+    { period: '2024', title: 'BCA_STARTED' }
+];
+
+var scrollHandler = function () {
+    var scrolled = window.pageYOffset;
+    var medal = document.querySelector('.medal-parallax');
+
+    if (medal) {
+        medal.style.transform =
+            'translate(-50%, calc(-50% + ' + (scrolled * 0.08) + 'px))';
+    }
+};
+
+window.addEventListener('scroll', scrollHandler);
+
+$scope.$on('$destroy', function () {
+    window.removeEventListener('scroll', scrollHandler);
+});
+
+
+}]);
+
+
     $scope.timeline2022 = [
         { period: '2022.Q4', title: 'CYBER_SECURITY_VAL' },
         { period: '2022.Q3', title: 'DROSS_ELIMINATION' },
@@ -289,6 +348,7 @@ app.controller('ProjectsController', ['$scope', function ($scope) {
 
 app.controller('ContactController', ['$scope', function ($scope) {
     // Form submissions / contact uplink controls
+    
 }]);
 
 // AngularJS Directives for reusable micro-interactions
